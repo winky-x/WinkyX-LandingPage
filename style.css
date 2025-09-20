@@ -450,3 +450,35 @@ header:hover {
   width: 287px;
   border-radius: 16px;
 }
+.wat-makes {
+  scroll-behavior: smooth;
+  display: flex;
+  height: 300vh;
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+.circle-design {
+  top:0;
+  padding: 37.5rem;
+  background-color: transparent;
+  /* Dark purple background */
+  position: absolute;
+  background: radial-gradient(circle at center,
+          #000000 30%,
+          /* Light white center */
+          #180242 50%,
+          /* Bright purple mid */
+          #87129e 65%,
+          /* Deeper purple */
+          #ffffff 75%
+          /* Dark outer glow */
+      );
+  border-radius: 50%;
+  filter: blur(0);
+  z-index: -1;
+  box-shadow: 0 21px 42px 30px rgba(255, 255, 255, 0.144);
+  width: 100%;
+  position: inherit;
+  align-self: center;
+}
