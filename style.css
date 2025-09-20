@@ -450,13 +450,25 @@ header:hover {
   width: 287px;
   border-radius: 16px;
 }
-.wat-makes {
+.third-page {
   scroll-behavior: smooth;
   display: flex;
-  height: 300vh;
+  flex-direction: column;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
-  background: transparent;
+  background-size: cover;
+  background-position: center;
+  background-image: url('src/preview.png');
+  height: 100%;
+  width: 100%;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 1rem;
+  margin: 0;
+
 }
 .circle-design {
   top:0;
