@@ -54,7 +54,7 @@ header {
   transition: all 0.3s ease;
   align-self: center;
   align-items: center;
-  vertical-align: center;
+  vertical-align: middle;
   justify-content: center;
   place-items: center;
   cursor: pointer;
@@ -79,12 +79,14 @@ header:hover {
   align-items: center;
   vertical-align: center;
   justify-content: center;
-  transition: all .325s;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
   border: none;
   border-radius: none;
   padding: 2px;
   border-radius: 7px;
   color: white;
+  background: transparent;
+  cursor: pointer;
 }
 .logo-div:hover {
   color: #ebdada;
@@ -126,7 +128,7 @@ header:hover {
   font-size: 15px;
 }
 .ul-one li {
-  transition: 0.225s ease-in-out;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
   margin: 0;
   color: #ffffffc0;
 }
@@ -152,7 +154,7 @@ header:hover {
   font-size: 15px;
 }
 .ul-two li {
-  transition: 0.225s ease-in-out;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
   color: #ffffffc0;
 }
 .ul-two li:hover {
@@ -165,6 +167,9 @@ header:hover {
   border-radius: 12px;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, .6), 0 8px 3px rgba(0, 0, 0, 0.548);
   backdrop-filter: blur(8px);
+}
+.menu-btn {
+  display: none;
 }
 
 .hero {
@@ -179,7 +184,9 @@ header:hover {
   text-align: center;
   overflow: hidden;
 }
-
+.hero-bg-img {
+  display: none;
+}
 .hero-img {
   position: absolute;
   height: 100%;
@@ -198,8 +205,8 @@ header:hover {
 }
 
 .hero h1 {
-  top: 9.5%;
-  font-size: clamp(2rem, 6vw, 6rem);
+  top: clamp(13.5%, 7%, 9.5%);
+  font-size: clamp(5.25rem, 6vw, 6rem);
   position: inherit;
 
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.692), rgba(255, 255, 255, 0.418));
@@ -249,14 +256,13 @@ header:hover {
 }
 
 .hero-btns {
-  top: 19%;
+  top: 22%;
   position: inherit;
   display: flex;
   flex-direction: row;
   gap: clamp(0.5rem, 4vw, 2rem);
   flex-wrap: wrap;
 }
-
 .primary-btn {
   border: 2px solid var(--glass-border);
   background: var(--glass-bg);
@@ -266,16 +272,13 @@ header:hover {
   backdrop-filter: blur(8px);
   transition: all .200s ease-in-out;
 }
-
 .primary-btn:hover {
   background: linear-gradient(155deg, var(--glass-bg) 60%, var(--glass-border) 80%, #ffffff73);
 }
-
 .primary-btn:active {
   box-shadow: 0 0 0 2px rgba(255, 255, 255, .6);
   transform: translateY(6px);
 }
-
 .second-btn {
   border: 2px solid var(--glass-border);
   background: var(--glass-bg);
@@ -285,11 +288,9 @@ header:hover {
   backdrop-filter: blur(8px);
   transition: all .325s ease-in-out;
 }
-
 .second-btn:hover {
   background: linear-gradient(155deg, var(--glass-bg) 60%, var(--glass-border) 80%, #ffffff41);
 }
-
 .spline-bot {
   position: absolute;
   /* place it freely */
@@ -305,26 +306,22 @@ header:hover {
   pointer-events: none;
   /* so it won’t block clicks */
 }
-
 .spline-bot iframe {
   background: transparent !important;
   width: 100%;
   height: 100%;
   border: none;
 }
-
 .spline-bot iframe {
   pointer-events: none;
   /* prevent blocking clicks */
 }
-
 .spline-bot iframe::-webkit-scrollbar,
 .spline-bot iframe *[class*="spline"],
 .spline-bot iframe+div {
   display: none !important;
   /* nukes badge */
 }
-
 .preview-img {
   position: relative;
   margin-top: 5.25%;
@@ -339,7 +336,6 @@ header:hover {
   outline: 0;
   border-radius: 14px;
 }
-
 .hero-carasoule {
   bottom: 12%;
   position: inherit;
@@ -351,7 +347,6 @@ header:hover {
   justify-content: center;
   align-items: center;
 }
-
 .slide-track {
   display: flex;
   gap: 20px;
@@ -359,12 +354,10 @@ header:hover {
   width: calc(180px * 14);
   /* width of one card * number of cards */
 }
-
 .slide-track>* {
   flex: 0 0 auto;
   /* prevent shrinking */
 }
-
 @keyframes slideCards {
   0% {
     transform: translateX(0);
@@ -376,14 +369,17 @@ header:hover {
   }
 }
 
-.capsule {
-  width: 180px;
-  height: 70px;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
+.lqd-capsule {
+  padding: 1.25rem 2.25rem;
   border-radius: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+}
+.lqd-capsule,
+.lqd-capsule > div {
+  border-radius: 2rem;
+}
+.liquidGlass-text-capsule {
+  z-index: 3;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -393,22 +389,28 @@ header:hover {
   gap: 0.5rem;
   vertical-align: middle;
 }
-
-.capsule i {
-  font-size: 24px;
+.capsule {
+  position: relative;
+  width: 180px;
+  height: 70px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  color: var(--clr-muted);
+  gap: 0.5rem;
+  vertical-align: middle;
 }
-
-.capsule .handle {
+.liquidGlass-text-capsule i {
+  font-size: 22px;
+}
+.liquidGlass-text-capsule .handle {
   font-size: 14px;
   font-weight: 500;
   opacity: 0.8;
 }
-
-.capsule .stat {
-  font-size: 12px;
-  color: #ccc;
-}
-
 .features {
   scroll-behavior: smooth;
   display: flex;
@@ -450,47 +452,265 @@ header:hover {
   width: 287px;
   border-radius: 16px;
 }
+
 .third-page {
   scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100%;
+  height: 150vh;
   overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  background-image: url('src/preview.png');
-  height: 100%;
-  width: 100%;
+  width: 96%;
   gap: 3rem;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 5rem 1rem;
-  margin: 0;
-
+  padding: 0;
+  margin: 2% 2%;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  background-image: url('src/3.png');
+  display: flex;
 }
-.circle-design {
-  top:0;
-  padding: 37.5rem;
-  background-color: transparent;
-  /* Dark purple background */
-  position: absolute;
-  background: radial-gradient(circle at center,
-          #000000 30%,
-          /* Light white center */
-          #180242 50%,
-          /* Bright purple mid */
-          #87129e 65%,
-          /* Deeper purple */
-          #ffffff 75%
-          /* Dark outer glow */
-      );
-  border-radius: 50%;
-  filter: blur(0);
-  z-index: -1;
-  box-shadow: 0 21px 42px 30px rgba(255, 255, 255, 0.144);
-  width: 100%;
+.text-int-div {
+  display: flex;
+  flex-direction: row;
+  gap: -15%;
+  width: 55%;
+  margin: 0 0 25% 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  vertical-align: middle;
+  z-index: 1;
+}
+.text-int {
+  margin-top: clamp(13.5%, 7%, 16.5%);
+  font-size: clamp(5.25rem, 6vw, 8rem);
   position: inherit;
-  align-self: center;
+
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.692), rgba(255, 255, 255, 0.418));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Add glass-like glow */
+  text-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(255, 255, 255, 0.603);
+}
+.text-int-one {
+  width: 125px;
+  height: 125px;
+}
+.text-int-sec {
+  width: 125px;
+  height: 125px;
+}
+.card-div {
+  position: inherit;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  border: none;
+  margin-left: 10%;
+  margin-right: 10%;;
+  width: 80%;
+}
+.cards {
+  padding: 2rem;
+}
+.cards,
+.cards > div {
+  height: 500px;
+  width: 300px;
+  padding: 3rem;
+  border-radius: 4rem;
+}
+.cards:hover {
+  padding: 5rem;
+  border-radius: 1.8rem;
+}
+.pfp {
+  padding: 0.75rem;
+  border-radius: 50%;
+}
+
+.liquidGlass-wrapper {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+}
+.liquidGlass-effect {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+
+  backdrop-filter: blur(3px);
+  filter: url(#glass-distortion);
+  overflow: hidden;
+  isolation: isolate;
+}
+.liquidGlass-tint {
+  z-index: 1;
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.25);
+}
+.liquidGlass-shine {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  overflow: hidden;
+
+  box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
+    inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+.liquidGlass-text {
+  z-index: 3;
+  color: white;
+  padding: 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+.liquidGlass-text:hover {
+  transform: scale(0.95);
+}
+.wrapper {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.button {
+  padding: 1rem 1.5rem;
+  border-radius: circle;
+  position: relative;
+}
+.button,
+.button > div {
+  border-radius: 3rem;
+}
+.button:hover {
+  padding: 1.25rem 1.8rem;
+}
+.button:active {
+  padding: 0.9rem 1.25rem;
+}
+.button:hover > div {
+  border-radius: 4rem;
+}
+
+@keyframes moveBackground {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 0% -1500%;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .button:hover > .liquidGlass-effect {
+    animation: moveBackground 5s linear infinite;
+  }
+}
+@media (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+}
+/* Responsible to mobile devices */
+@media (max-width: 786px), (max-width: 930px) {
+  .ul-two,
+  .ul-one {
+    display: none;
+  }
+  header {
+    align-items: center;
+    position: sticky;
+    top: 1.5%;
+    width: 80%;
+    height: 2.5rem;
+    border-radius: 1.45rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0 2% 0 2%;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+  }
+  .logo-div {
+    position: absolute;
+  }
+  .menu-btn {
+    margin-left: 90%;
+    text-decoration: none;
+    display: block;
+    padding: 0.25rem;
+    border-radius: 50%;
+  }
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: left 0.3 ease;
+    z-index: 99999;
+  }
+  .meu.active {
+    left: 0;
+  }
+  .menu-btn svg {
+    color: white;
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+
+  .hero {
+    min-height: 100vh;
+  }
+  .hero-btns {
+    top: 32%;
+  }
+  .hero-img {
+    background-image: none;
+    padding: 0;
+  }
+  .hero-bg-img {
+    position: absolute;
+    display: block;
+    top: 30%;
+    width: 100%;
+    height: 45%;
+    margin-left: 0;
+  }
+  .preview-img {
+    position: absolute;
+    height: 23rem;
+    width: 95%;
+    border-radius: 14px;
+    align-self: center;
+    top: 43%;
+    margin: 0 0 0;
+    left: 2.5%;
+    right:5%;
+  }
+  .img-preview {
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-carasoule {
+    top: 70%;
+  }
 }

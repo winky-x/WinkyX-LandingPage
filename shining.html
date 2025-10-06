@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shining Text Demo</title>
+  <style>
+    body {
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .shining-text {
+      font-size: 2rem;
+      font-weight: 500;
+      background: linear-gradient(
+        110deg,
+        #404040 55%,
+        #ffffff 60%,
+        #404040 75%,
+        #404040
+      );
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 2s linear infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        background-position: 150% 0;
+      }
+      100% {
+        background-position: -150% 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="shining-text">HextaAI is thinking...</h1>
+</body>
+</html>

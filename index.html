@@ -1,9 +1,11 @@
 <!-- Landing page for winkyx-a offline fully encrypted messenger app with liquid glass from apple design -->
 <DOCTYPE! html>
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>WinkyX - Encrypted Messenger</title>
   </head>
 
@@ -22,202 +24,316 @@
       <li><a>Features</a></li>
       <li><a>Download</a></li>
     </ul>
+
+    <button class="menu-btn" onclick="togglemenu()" style="display:none;">
+      <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF">
+        <path
+          d="M153.33-240q-14.16 0-23.75-9.62-9.58-9.61-9.58-23.83 0-14.22 9.58-23.72 9.59-9.5 23.75-9.5h653.34q14.16 0 23.75 9.62 9.58 9.62 9.58 23.83 0 14.22-9.58 23.72-9.59 9.5-23.75 9.5H153.33Zm0-206.67q-14.16 0-23.75-9.61-9.58-9.62-9.58-23.84 0-14.21 9.58-23.71 9.59-9.5 23.75-9.5h653.34q14.16 0 23.75 9.61 9.58 9.62 9.58 23.84 0 14.21-9.58 23.71-9.59 9.5-23.75 9.5H153.33Zm0-206.66q-14.16 0-23.75-9.62-9.58-9.62-9.58-23.83 0-14.22 9.58-23.72 9.59-9.5 23.75-9.5h653.34q14.16 0 23.75 9.62 9.58 9.61 9.58 23.83 0 14.22-9.58 23.72-9.59 9.5-23.75 9.5H153.33Z" />
+      </svg>
+    </button>
+    <!-- menu -->
+    <div id="mobileMenu" class="menu" style="display:none;">
+      <a href="#encryption">Encryption</a>
+      <a href="#features">Features</a>
+      <a href="#download">Download</a>
+      <a href="#contact">Contact</a>
+    </div>
   </header>
 
- <body>
-  <div class="hero">
-    <div class="hero-img">
-    <h1>WinkyX- the future</h1>
+  <body>
+    <div class="hero">
+      <div class="hero-img">
+        <img src="src/preview.png" alt="preview" class="hero-bg-img">
+        <h1>WinkyX- the future</h1>
 
-   <div class="hero-btns">
-    <a href="liquid-glass-effect-macos/index1.html" class="primary-btn">
-    <span>Download now</span>
-    </a>
-    <a href="#download" class="second-btn">
-      <span>Learn more</span>
-    </a>
-   </div>
-   <div class="img-preview">
-    <img src="src/img.png" alt="preview img" class="preview-img">
-   </div>
-   <div class="spline-bot">
-    <iframe src='https://my.spline.design/genkubgreetingrobot-6ziUBkgihv9UdS81kXRliytY/'
-     frameborder='0'
-     width='100%'
-      height='100%'>
-    </iframe>
-   </div>  
-
-   <div class="hero-carasoule">
-    <div class="slide-track">
-        <div class="capsule">
-            <i class="fab fa-instagram"></i>
-            <div class="handle">@winky.ai</div>
+        <div class="hero-btns">
+          <a>
+            <div class="liquidGlass-wrapper button">
+              <div class="liquidGlass-effect"></div>
+              <div class="liquidGlass-tint"></div>
+              <div class="liquidGlass-shine"></div>
+              <div class="liquidGlass-text">
+                <span>Download now</span>
+              </div>
+            </div>
+          </a>
+          <a>
+            <div class="liquidGlass-wrapper button">
+              <div class="liquidGlass-effect"></div>
+              <div class="liquidGlass-tint"></div>
+              <div class="liquidGlass-shine"></div>
+              <div class="liquidGlass-text">
+                <span>Learn more</span>
+              </div>
+            </div>
+          </a>
         </div>
-        <div class="capsule">
-            <i class="fab fa-twitter"></i>
-            <div class="handle">@winkybot</div>
+        <div class="img-preview">
+          <img src="src/img.png" alt="preview img" class="preview-img">
         </div>
-        <div class="capsule">
-            <i class="fab fa-discord"></i>
-            <div class="handle">Winky Server</div>
-        </div>
-        <div class="capsule">
-            <i class="fab fa-youtube"></i>
-            <div class="handle">Winky Talks</div>
-        </div>
-        <div class="capsule">
-            <i class="fab fa-telegram"></i>
-            <div class="handle">@winkynews</div>
-        </div>
-        <div class="capsule">
-            <i class="fab fa-linkedin"></i>
-            <div class="handle">Winky AI</div>
-        </div>
-        <div class="capsule">
-            <i class="fab fa-facebook"></i>
-            <div class="handle">Winky AI</div>
+        <div class="spline-bot" style="display: none;">
+          <iframe src='https://my.spline.design/genkubgreetingrobot-6ziUBkgihv9UdS81kXRliytY/' frameborder='0'
+            width='100%' height='100%'>
+          </iframe>
         </div>
 
-        <!-- Repeat cards for infinite effect -->
-        <div class="capsule">
-            <i class="fab fa-instagram"></i>
-            <div class="handle">@winky.ai</div>
+        <div class="hero-carasoule">
+          <div class="slide-track">
+
+            <div class="liquidGlass-wrapper lqd-capsule">
+              <div class="liquidGlass-effect"></div>
+              <div class="liquidGlass-tint"></div>
+              <div class="liquidGlass-shine"></div>
+              <div class="liquidGlass-text-capsule">
+                <i class="fab fa-instagram"></i>
+                <div class="handle">@winky.ai</div>
+              </div>
+            </div>
+            <div class="liquidGlass-wrapper lqd-capsule">
+              <div class="liquidGlass-effect"></div>
+              <div class="liquidGlass-tint"></div>
+              <div class="liquidGlass-shine"></div>
+              <div class="liquidGlass-text-capsule">
+                <i class="fab fa-instagram"></i>
+                <div class="handle">@winky.ai</div>
+              </div>
+            </div>
+            <div class="liquidGlass-wrapper lqd-capsule">
+              <div class="liquidGlass-effect"></div>
+              <div class="liquidGlass-tint"></div>
+              <div class="liquidGlass-shine"></div>
+              <div class="liquidGlass-text-capsule">
+                <i class="fab fa-instagram"></i>
+                <div class="handle">@winky.ai</div>
+              </div>
+            </div>
+            <div class="liquidGlass-wrapper lqd-capsule">
+              <div class="liquidGlass-effect"></div>
+              <div class="liquidGlass-tint"></div>
+              <div class="liquidGlass-shine"></div>
+              <div class="liquidGlass-text-capsule">
+                <i class="fab fa-instagram"></i>
+                <div class="handle">@winky.ai</div>
+              </div>
+            </div>
+            <div class="liquidGlass-wrapper lqd-capsule">
+              <div class="liquidGlass-effect"></div>
+              <div class="liquidGlass-tint"></div>
+              <div class="liquidGlass-shine"></div>
+              <div class="liquidGlass-text-capsule">
+                <i class="fab fa-instagram"></i>
+                <div class="handle">@winky.ai</div>
+              </div>
+            </div>
+            <div class="liquidGlass-wrapper lqd-capsule">
+              <div class="liquidGlass-effect"></div>
+              <div class="liquidGlass-tint"></div>
+              <div class="liquidGlass-shine"></div>
+              <div class="liquidGlass-text-capsule">
+                  <i class="fab fa-instagram"></i>
+                  <div class="handle">@winky.ai</div>
+              </div>
+              </div>
+              <div class="liquidGlass-wrapper lqd-capsule">
+                <div class="liquidGlass-effect"></div>
+                <div class="liquidGlass-tint"></div>
+                <div class="liquidGlass-shine"></div>
+                <div class="liquidGlass-text-capsule">
+                    <i class="fab fa-instagram"></i>
+                    <div class="handle">@winky.ai</div>
+                </div>
+                </div>
+                <div class="liquidGlass-wrapper lqd-capsule">
+                  <div class="liquidGlass-effect"></div>
+                  <div class="liquidGlass-tint"></div>
+                  <div class="liquidGlass-shine"></div>
+                  <div class="liquidGlass-text-capsule">
+                      <i class="fab fa-instagram"></i>
+                      <div class="handle">@winky.ai</div>
+                  </div>
+                  </div>
+
+            <!-- Repeat cards for infinite effect -->
+            <div class="liquidGlass-wrapper lqd-capsule">
+              <div class="liquidGlass-effect"></div>
+              <div class="liquidGlass-tint"></div>
+              <div class="liquidGlass-shine"></div>
+              <div class="liquidGlass-text-capsule">
+                <i class="fab fa-instagram"></i>
+                <div class="handle">@winky.ai</div>
+              </div>
+            </div>
+            <div class="liquidGlass-wrapper lqd-capsule">
+              <div class="liquidGlass-effect"></div>
+              <div class="liquidGlass-tint"></div>
+              <div class="liquidGlass-shine"></div>
+              <div class="liquidGlass-text-capsule">
+                <i class="fab fa-instagram"></i>
+                <div class="handle">@winky.ai</div>
+              </div>
+            </div>
+            <div class="liquidGlass-wrapper lqd-capsule">
+              <div class="liquidGlass-effect"></div>
+              <div class="liquidGlass-tint"></div>
+              <div class="liquidGlass-shine"></div>
+              <div class="liquidGlass-text-capsule">
+                <i class="fab fa-instagram"></i>
+                <div class="handle">@winky.ai</div>
+              </div>
+            </div>
+            <div class="liquidGlass-wrapper lqd-capsule">
+              <div class="liquidGlass-effect"></div>
+              <div class="liquidGlass-tint"></div>
+              <div class="liquidGlass-shine"></div>
+              <div class="liquidGlass-text-capsule">
+                <i class="fab fa-instagram"></i>
+                <div class="handle">@winky.ai</div>
+              </div>
+            </div>
+            <div class="liquidGlass-wrapper lqd-capsule">
+              <div class="liquidGlass-effect"></div>
+              <div class="liquidGlass-tint"></div>
+              <div class="liquidGlass-shine"></div>
+              <div class="liquidGlass-text-capsule">
+                <i class="fab fa-instagram"></i>
+                <div class="handle">@winky.ai</div>
+              </div>
+            </div>
+            <div class="liquidGlass-wrapper lqd-capsule">
+              <div class="liquidGlass-effect"></div>
+              <div class="liquidGlass-tint"></div>
+              <div class="liquidGlass-shine"></div>
+              <div class="liquidGlass-text-capsule">
+                  <i class="fab fa-instagram"></i>
+                  <div class="handle">@winky.ai</div>
+              </div>
+              </div>
+              <div class="liquidGlass-wrapper lqd-capsule">
+                <div class="liquidGlass-effect"></div>
+                <div class="liquidGlass-tint"></div>
+                <div class="liquidGlass-shine"></div>
+                <div class="liquidGlass-text-capsule">
+                    <i class="fab fa-instagram"></i>
+                    <div class="handle">@winky.ai</div>
+                </div>
+                </div>
+                <div class="liquidGlass-wrapper lqd-capsule">
+                  <div class="liquidGlass-effect"></div>
+                  <div class="liquidGlass-tint"></div>
+                  <div class="liquidGlass-shine"></div>
+                  <div class="liquidGlass-text-capsule">
+                      <i class="fab fa-instagram"></i>
+                      <div class="handle">@winky.ai</div>
+                  </div>
+                  </div>
+          </div>
         </div>
-        <div class="capsule">
-            <i class="fab fa-twitter"></i>
-            <div class="handle">@winkybot</div>
-        </div>
-        <div class="capsule">
-            <i class="fab fa-discord"></i>
-            <div class="handle">Winky Server</div>
-        </div>
-        <div class="capsule">
-          <i class="fab fa-instagram"></i>
-          <div class="handle">@winky.ai</div>
       </div>
-      <div class="capsule">
-          <i class="fab fa-twitter"></i>
-          <div class="handle">@winkybot</div>
-      </div>
-      <div class="capsule">
-          <i class="fab fa-discord"></i>
-          <div class="handle">Winky Server</div>
-      </div>
-      <div class="capsule">
-          <i class="fab fa-youtube"></i>
-          <div class="handle">Winky Talks</div>
-      </div>
-      <div class="capsule">
-          <i class="fab fa-telegram"></i>
-          <div class="handle">@winkynews</div>
-      </div>
-      <div class="capsule">
-          <i class="fab fa-linkedin"></i>
-          <div class="handle">Winky AI</div>
-      </div>
-      <div class="capsule">
-          <i class="fab fa-facebook"></i>
-          <div class="handle">Winky AI</div>
-      </div>
-      <!-- Repeat cards for infinite effect -->
-      <div class="capsule">
-          <i class="fab fa-instagram"></i>
-          <div class="handle">@winky.ai</div>
-      </div>
-      <div class="capsule">
-          <i class="fab fa-twitter"></i>
-          <div class="handle">@winkybot</div>
-      </div>
-      <div class="capsule">
-          <i class="fab fa-discord"></i>
-          <div class="handle">Winky Server</div>
-      </div>
+
     </div>
-   </div>
-  </div>
 
-  </div>
-
-  <div class="features">
-    <h1>How to use WinkyX</h1>
+    <div class="features">
+      <h1>How to use WinkyX</h1>
       <div class="cards-section" id="cards">
         <div class="card"><img src="src/ui-1.png" alt="ui preview img"></div>
         <div class="card"><img src="src/ui-2.jpg" alt="ui preview img"></div>
         <div class="card"><img src="src/ui-3.png" alt="ui preview img"></div>
+      </div>
     </div>
-  </div>
 
-  <div class="third-page">
-    
-  </div>
-  
- <script>
-  window.addEventListener("scroll", () => {
-    const header = document.querySelector("header");
-    if (window.scrollY > 200) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
-  </script>
-  
-  <svg style="display: none">
-    <filter
-      id="glass-distortion"
-      x="0%"
-      y="0%"
-      width="100%"
-      height="100%"
-      filterUnits="objectBoundingBox"
-    >
-      <feTurbulence
-        type="fractalNoise"
-        baseFrequency="0.01 0.01"
-        numOctaves="1"
-        seed="5"
-        result="turbulence"
-      />
-      <!-- Seeds: 14, 17,  -->
-  
-      <feComponentTransfer in="turbulence" result="mapped">
-        <feFuncR type="gamma" amplitude="1" exponent="10" offset="0.5" />
-        <feFuncG type="gamma" amplitude="0" exponent="1" offset="0" />
-        <feFuncB type="gamma" amplitude="0" exponent="1" offset="0.5" />
-      </feComponentTransfer>
-  
-      <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap" />
-  
-      <feSpecularLighting
-        in="softMap"
-        surfaceScale="5"
-        specularConstant="1"
-        specularExponent="100"
-        lighting-color="white"
-        result="specLight"
-      >
-        <fePointLight x="-200" y="-200" z="300" />
-      </feSpecularLighting>
-  
-      <feComposite
-        in="specLight"
-        operator="arithmetic"
-        k1="0"
-        k2="1"
-        k3="1"
-        k4="0"
-        result="litImage"
-      />
-  
-      <feDisplacementMap
-        in="SourceGraphic"
-        in2="softMap"
-        scale="150"
-        xChannelSelector="R"
-        yChannelSelector="G"
-      />
-    </filter>
-  </svg>
- </body>
-</html>
+    <div class="third-page">
+      <div class="text-int-div">
+        <img src="src/1.png" class="text-int-one" alt="feature img">
+      <h1 class="text-int" id="download">Something</h1>
+        <img src="src/2.png" class="text-int-sec" alt="feature img">
+      </div>
+      <div class="card-div">
+        <div class="liquidGlass-wrapper cards">
+          <div class="liquidGlass-effect"></div>
+          <div class="liquidGlass-tint"></div>
+          <div class="liquidGlass-shine"></div>
+          <div class="liquidGlass-text">
+            <div class="liquidGlass-wrapper pfp">
+              <div class="liquidGlass-effect"></div>
+              <div class="liquidGlass-tint"></div>
+              <div class="liquidGlass-shine"></div>
+              <div class="liquidGlass-text">
+                <div class="pfp">
+                  <img src="pfp1" alt="pfp img">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="liquidGlass-wrapper cards">
+          <div class="liquidGlass-effect"></div>
+          <div class="liquidGlass-tint"></div>
+          <div class="liquidGlass-shine"></div>
+          <div class="liquidGlass-text">
+            <div class="pfp">
+              <img src="pfp1" alt="pfp img">
+            </div>
+          </div>
+        </div>
+        <div class="liquidGlass-wrapper cards">
+          <div class="liquidGlass-effect"></div>
+          <div class="liquidGlass-tint"></div>
+          <div class="liquidGlass-shine"></div>
+          <div class="liquidGlass-text">
+            <div class="pfp">
+              <img src="pfp1" alt="pfp img">
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <a>
+        <div class="liquidGlass-wrapper button">
+          <div class="liquidGlass-effect"></div>
+          <div class="liquidGlass-tint"></div>
+          <div class="liquidGlass-shine"></div>
+          <div class="liquidGlass-text">
+            <span>Download now</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (window.scrollY > 200) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+    </script>
+
+    <svg style="display: none">
+      <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%" filterUnits="objectBoundingBox">
+        <feTurbulence type="fractalNoise" baseFrequency="0.01 0.01" numOctaves="1" seed="5" result="turbulence" />
+        <!-- Seeds: 14, 17,  -->
+
+        <feComponentTransfer in="turbulence" result="mapped">
+          <feFuncR type="gamma" amplitude="1" exponent="10" offset="0.5" />
+          <feFuncG type="gamma" amplitude="0" exponent="1" offset="0" />
+          <feFuncB type="gamma" amplitude="0" exponent="1" offset="0.5" />
+        </feComponentTransfer>
+
+        <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap" />
+
+        <feSpecularLighting in="softMap" surfaceScale="5" specularConstant="1" specularExponent="100"
+          lighting-color="white" result="specLight">
+          <fePointLight x="-200" y="-200" z="300" />
+        </feSpecularLighting>
+
+        <feComposite in="specLight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litImage" />
+
+        <feDisplacementMap in="SourceGraphic" in2="softMap" scale="150" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </svg>
+  </body>
+
+  </html>
